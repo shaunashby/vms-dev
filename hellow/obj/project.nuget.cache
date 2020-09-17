@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fNjA2DaaZEpYv01Jr2CbBRFQ65o49jKgIAlBQQ+1FNmBhe2gShnFhOZ9vq5hmw+Fae8EuSehYPsKsS2V55X1mg==",
+  "dgSpecHash": "PYDazTQFi259pdx6s2gfUaMwu9gtamF7aCizATnNa7FbvIsChKWKzK1AScjs2eOaznJm3nVGH56cqy4NgoD45w==",
   "success": true,
-  "projectFilePath": "/Users/sashby/Library/Mobile Documents/com~apple~CloudDocs/Desktop/CI/IMAD/vms-dev/hellow/hellow.csproj",
+  "projectFilePath": "/home/sashby/work/projects/devel/dotnet/vms-dev/hellow/hellow.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

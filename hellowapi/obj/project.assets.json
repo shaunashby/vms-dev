@@ -8,20 +8,20 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "/Users/sashby/.nuget/packages/": {}
+    "/home/sashby/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sashby/Library/Mobile Documents/com~apple~CloudDocs/Desktop/CI/IMAD/vms-dev/hellowapi/hellowapi.csproj",
+      "projectUniqueName": "/home/sashby/work/projects/devel/dotnet/vms-dev/hellowapi/hellowapi.csproj",
       "projectName": "hellowapi",
-      "projectPath": "/Users/sashby/Library/Mobile Documents/com~apple~CloudDocs/Desktop/CI/IMAD/vms-dev/hellowapi/hellowapi.csproj",
-      "packagesPath": "/Users/sashby/.nuget/packages/",
-      "outputPath": "/Users/sashby/Library/Mobile Documents/com~apple~CloudDocs/Desktop/CI/IMAD/vms-dev/hellowapi/obj/",
+      "projectPath": "/home/sashby/work/projects/devel/dotnet/vms-dev/hellowapi/hellowapi.csproj",
+      "packagesPath": "/home/sashby/.nuget/packages/",
+      "outputPath": "/home/sashby/work/projects/devel/dotnet/vms-dev/hellowapi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/sashby/Library/Mobile Documents/com~apple~CloudDocs/Desktop/CI/IMAD/vms-dev/NuGet.Config",
-        "/Users/sashby/.nuget/NuGet/NuGet.Config"
+        "/home/sashby/work/projects/devel/dotnet/vms-dev/nuget.config",
+        "/home/sashby/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
       }
     }
   }

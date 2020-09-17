@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k2QnmImmnEr05+pqsW5QdZVyAsP1EUjild8K2UaHpsHhkaRalZC0gbVfS/mgry4ikqBrzqED3fisZuM0XapDDA==",
+  "dgSpecHash": "POtPwgGzINR9cgY7zk3jQgV1JZeNLkMU5nI48WV9ES0P1yMhnT6MqU9mjqkCnFFH7hR3VblG/dYCG+GryD/kzg==",
   "success": true,
-  "projectFilePath": "/Users/sashby/Library/Mobile Documents/com~apple~CloudDocs/Desktop/CI/IMAD/vms-dev/hellowapi/hellowapi.csproj",
+  "projectFilePath": "/home/sashby/work/projects/devel/dotnet/vms-dev/hellowapi/hellowapi.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
