@@ -1,0 +1,14 @@
+
+stages:
+  - build
+
+build:hellow
+  image: "mcr.microsoft.com/dotnet/core/sdk:3.1"
+  stage: build
+  script:
+   - dotnet version
+  tags:
+   - docker
+  only:
+    refs:
+     - develop
