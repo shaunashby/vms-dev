@@ -2,7 +2,7 @@
 stages:
   - build
 
-build:hellow
+build:hellow:
   image: "mcr.microsoft.com/dotnet/core/sdk:3.1"
   stage: build
   script:
