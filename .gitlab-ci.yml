@@ -3,26 +3,27 @@ stages:
   - build
 
 before_script:
+  - echo "=== Loading our self-signed CA certificate into Trust Store ==="
   - cat "$CA_SS_CERT" > /usr/local/share/ca-certificates/our.crt && update-ca-certificates
-  - openssl x509 -in /usr/local/share/ca-certificates/our.crt -noout -text
+  - echo "==============================================================="
   - dotnet --version
 
 test:all:
   image: "mcr.microsoft.com/dotnet/core/sdk:3.1"
   stage: test
   script:
-   - dotnet test HellowTest/HellowTest.csproj
+    - dotnet test HellowTest/HellowTest.csproj
 
 build:hellow:
   image: "mcr.microsoft.com/dotnet/core/sdk:3.1"
   stage: build
   script:
-   - dotnet publish -c Release -o publish hellow/hellow.csproj
+    - dotnet publish -c Release -o publish hellow/hellow.csproj
   tags:
-   - docker
+    - docker
   only:
     refs:
-     - develop
+      - develop
   artifacts:
     paths:
       - publish/
@@ -31,12 +32,12 @@ build:hellowapi:
   image: "mcr.microsoft.com/dotnet/core/sdk:3.1"
   stage: build
   script:
-   - dotnet publish -c Release -o publish hellowapi/hellowapi.csproj
+    - dotnet publish -c Release -o publish hellowapi/hellowapi.csproj
   tags:
-   - docker
+    - docker
   only:
     refs:
-     - develop
+      - develop
   artifacts:
     paths:
       - publish/
