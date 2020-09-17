@@ -17,6 +17,11 @@ test:all:
   script:
     - dotnet test HellowTest/HellowTest.csproj
 
+code:qa:
+  stage: test
+  script:
+    - echo "Run some appropriate QA/code quality checks here"
+
 build:hellow:
   stage: build
   script:
