@@ -9,7 +9,7 @@ build:hellow:
   image: "mcr.microsoft.com/dotnet/core/sdk:3.1"
   stage: build
   script:
-   - dotnet publish -c Release -o ../publish hellow/hellow.csproj
+   - dotnet publish -c Release -o publish hellow/hellow.csproj
   tags:
    - docker
   only:
@@ -23,7 +23,7 @@ build:hellowapi:
   image: "mcr.microsoft.com/dotnet/core/sdk:3.1"
   stage: build
   script:
-   - dotnet publish -c Release -o ../publish hellowapi/hellowapi.csproj
+   - dotnet publish -c Release -o publish hellowapi/hellowapi.csproj
   tags:
    - docker
   only:
