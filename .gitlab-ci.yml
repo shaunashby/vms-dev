@@ -19,7 +19,7 @@ test:all:
     - name: "mcr.microsoft.com/mssql/server:2017-latest"
       alias: mssqldb
   variables:
-    ACCEPT_EULA: Y
+    ACCEPT_EULA: "Y"
     SA_PASSWORD: "$SQLSERVER_SA_PASSWORD"
   script:
     - env
