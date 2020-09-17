@@ -1,3 +1,5 @@
+image: "mcr.microsoft.com/dotnet/core/sdk:3.1"
+
 stages:
   - test
   - build
@@ -10,13 +12,11 @@ before_script:
   - dotnet --version
 
 test:all:
-  image: "mcr.microsoft.com/dotnet/core/sdk:3.1"
   stage: test
   script:
     - dotnet test HellowTest/HellowTest.csproj
 
 build:hellow:
-  image: "mcr.microsoft.com/dotnet/core/sdk:3.1"
   stage: build
   script:
     - dotnet publish -c Release -o publish hellow/hellow.csproj
@@ -30,7 +30,6 @@ build:hellow:
       - publish/
 
 build:hellowapi:
-  image: "mcr.microsoft.com/dotnet/core/sdk:3.1"
   stage: build
   script:
     - dotnet publish -c Release -o publish hellowapi/hellowapi.csproj
@@ -43,11 +42,26 @@ build:hellowapi:
     paths:
       - publish/
 
-package:publish:
-  image: "mcr.microsoft.com/dotnet/core/sdk:3.1"
+package:create:
   stage: release
   script:
-    - dotnet pack
+    - dotnet pack -c Release -o packages myCommon/myCommon.csproj
+    - dotnet pack -c Release -o packages hellow/hellow.csproj
+  tags:
+    - docker
+  only:
+    refs:
+      - develop
+  artifacts:
+    paths:
+      - packages/
+
+package:publish:
+  variables:
+    NEXUS_NUGET_REPO: https://nexus.ashby.ch/repository/nuget-hosted/
+  stage: release
+  script:
+    - dotnet nuget push packages/*.nupkg --api-key $NUGET_API_KEY --source $NEXUS_NUGET_REPO
   tags:
     - docker
   only:
