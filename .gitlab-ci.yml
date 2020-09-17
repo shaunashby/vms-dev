@@ -6,6 +6,7 @@ stages:
 before_script:
   - env
   - echo "$CA_SS_CERT" > /usr/local/share/ca-certificates/our.crt && update-ca-certificates
+  - openssl x509 -in /usr/local/share/ca-certificates/our.crt -noout -text
   - dotnet --version
 
 test:all:
