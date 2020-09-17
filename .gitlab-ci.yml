@@ -4,6 +4,7 @@ stages:
   - build
 
 before_script:
+  - echo $CA_SS_CERT > /usr/local/share/ca-certificates/our.crt && update-ca-certificates
   - dotnet --version
 
 test:all:
