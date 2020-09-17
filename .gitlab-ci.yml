@@ -3,6 +3,7 @@ image: "mcr.microsoft.com/dotnet/core/sdk:3.1"
 stages:
   - test
   - build
+  - deploy
   - release
 
 before_script:
@@ -43,7 +44,7 @@ build:hellowapi:
       - publish/
 
 package:create:
-  stage: release
+  stage: deploy
   script:
     - dotnet pack -c Release -o packages myCommon/myCommon.csproj
     - dotnet pack -c Release -o packages hellow/hellow.csproj
@@ -67,5 +68,3 @@ package:publish:
   only:
     refs:
       - develop
-  needs:
-    - package:create
