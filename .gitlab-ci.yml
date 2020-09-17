@@ -7,6 +7,7 @@ build:hellow:
   stage: build
   script:
    - dotnet --version
+   - dotnet build hellow
   tags:
    - docker
   only:
