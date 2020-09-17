@@ -1,6 +1,7 @@
 stages:
   - test
   - build
+  - release
 
 before_script:
   - echo "=== Loading our self-signed CA certificate into Trust Store ==="
@@ -41,3 +42,14 @@ build:hellowapi:
   artifacts:
     paths:
       - publish/
+
+package:publish:
+  image: "mcr.microsoft.com/dotnet/core/sdk:3.1"
+  stage: release
+  script:
+    - dotnet pack
+  tags:
+    - docker
+  only:
+    refs:
+      - develop
