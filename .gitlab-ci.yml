@@ -67,3 +67,5 @@ package:publish:
   only:
     refs:
       - develop
+  needs:
+    - package:create
